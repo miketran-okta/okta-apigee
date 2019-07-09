@@ -2,12 +2,26 @@
 
 This proxy project mints APIGEE opaque tokens which are mapped to Okta JWT tokens for authentication and authorizaton.  The project allows teams to leverage the benefits of Okta as an Identity Provider and yet continue to leverage APIGEE opaque tokens which may have already been issued in live production environments.  Thus this proxy provides a vehicle for teams to gracefully migrate OAuth clients over to Okta without requireing re-authenticaton, password resets or any other functions which could disrupte the user experience.
 
+## Prerequisites
+
+- An Apigee OAuth client ID and secret
+- An Okta OAuth application setup with the provided client ID and redirect URI
+
 ## Setup & Deployment
 
 - Zip the apiproxy directory (i.e apiproxy.zip) and depoy the bundle as a new Proxy within the APIGEE administrator console
 - Update the **Assign Environment Variables** under Policies with the appropriate configuration values
-- Update the *HTTP Target* of the *default* under **Target Endpoints** to reference the Okta tenet *i.e https://dev-989484.oktapreview.com* 
-- Under Policies -> **openid-configuration**, update the json object within the *payload* tag to reference the correct Apigee endpoints *i.e https://miketranokta-test.apigee.net/okta-apigee/* . Also ensure the **issuer** is set to the URL of the okta tenet
+
+![1](https://github.com/miketran-okta/okta-apigee/blob/master/1.png "1")
+
+- Update the *HTTP Target* of the *default* under **Target Endpoints** to reference the Okta tenet 
+    - *i.e https://dev-989484.oktapreview.com* 
+
+![1](https://github.com/miketran-okta/okta-apigee/blob/master/2.png "1")
+
+- Under Policies -> **openid-configuration**, update the json object within the *payload* tag to reference the correct Apigee endpoints 
+    - *i.e https://miketranokta-test.apigee.net/okta-apigee/*
+    - also ensure the **issuer** is set to the URL of the okta tenet
 
 ```json
 
@@ -35,6 +49,8 @@ This proxy project mints APIGEE opaque tokens which are mapped to Okta JWT token
     "request_parameter_supported": false
 }
 ```
+
+![1](https://github.com/miketran-okta/okta-apigee/blob/master/3.png "1")
 
 - Deploy the new proxy to an environment
 
