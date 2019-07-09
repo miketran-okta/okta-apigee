@@ -12,7 +12,7 @@ This proxy project mints APIGEE opaque tokens which are mapped to Okta JWT token
 
 ## Testing
 
-This project can be tested with any OAuth client.  A good example would be the Okta for Android Sample found at https://github.com/okta/samples-android/tree/master/custom-sign-in
+This project can be tested with any OAuth client.  A good example would be the Okta for Android Sample found [here](https://github.com/okta/samples-android/tree/master/custom-sign-in)
 
 ## Architecture Flow
 
