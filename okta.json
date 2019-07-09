@@ -1,0 +1,12 @@
+{
+  "name": "Okta+Apigee Token Service",
+  "description": "This project extends the OAuth capabilities of the APIGEE with Okta's OAuth token service.  Added capabilities include support for OpenID Connect and other Okta IdP services such as MFA, social login, fine-grained access via scopes and many others.",
+  "url": "https://github.com/miketran-okta/okta-apigee",  
+  "categories": [
+    "user-management",
+    "authentication",
+    "authorization",
+    "sso",
+    "api-authentication"
+  ]
+}
