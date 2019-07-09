@@ -7,7 +7,35 @@ This proxy project mints APIGEE opaque tokens which are mapped to Okta JWT token
 - Zip the apiproxy directory (i.e apiproxy.zip) and depoy the bundle as a new Proxy within the APIGEE administrator console
 - Update the **Assign Environment Variables** under Policies with the appropriate configuration values
 - Update the *HTTP Target* of the *default* under **Target Endpoints** to reference the Okta tenet *i.e https://dev-989484.oktapreview.com* 
-- Update the **openid-configuration** under Policies so that the *payload* field references the correct APIAGEE endpoints *i.e https://miketranokta-test.apigee.net/okta-apigee/*. Also ensure the **issuer** is set to the URL of the okta tenet
+- Under Policies -> **openid-configuration**, update the json object within the *payload* tag to reference the correct Apigee endpoints *i.e https://miketranokta-test.apigee.net/okta-apigee/* . Also ensure the **issuer** is set to the URL of the okta tenet
+
+```json
+
+{
+    "issuer": "https://dev-989484.oktapreview.com",
+    "authorization_endpoint": "https://miketranokta-test.apigee.net/okta-apigee/oauth2/v1/authorize",
+    "token_endpoint": "https://miketranokta-test.apigee.net/okta-apigee/oauth2/v1/token",
+    "userinfo_endpoint": "https://miketranokta-test.apigee.net/okta-apigee/oauth2/v1/userinfo",
+    "registration_endpoint": "https://miketranokta-test.apigee.net/okta-apigee/oauth2/v1/clients/0oalfafa3z23dBWMB0h7",
+    "jwks_uri": "https://miketranokta-test.apigee.net/okta-apigee/oauth2/v1/keys?client_id=0oalfafa3z23dBWMB0h7",
+    "response_types_supported": ["code"],
+    "response_modes_supported": ["query", "fragment", "form_post", "okta_post_message"],
+    "grant_types_supported": ["authorization_code", "refresh_token"],
+    "subject_types_supported": ["public"],
+    "id_token_signing_alg_values_supported": ["RS256"],
+    "scopes_supported": ["openid", "email", "profile", "address", "phone", "offline_access"],
+    "token_endpoint_auth_methods_supported": ["none"],
+    "claims_supported": ["iss", "ver", "sub", "aud", "iat", "exp", "jti", "auth_time", "amr", "idp", "nonce", "name", "nickname", "preferred_username", "given_name", "middle_name", "family_name", "email", "email_verified", "profile", "zoneinfo", "locale", "address", "phone_number", "picture", "website", "gender", "birthdate", "updated_at", "at_hash", "c_hash"],
+    "code_challenge_methods_supported": ["S256"],
+    "introspection_endpoint": "https://miketranokta-test.apigee.net/okta-apigee/oauth2/v1/introspect",
+    "introspection_endpoint_auth_methods_supported": ["none"],
+    "revocation_endpoint": "https://miketranokta-test.apigee.net/okta-apigee/oauth2/v1/revoke",
+    "revocation_endpoint_auth_methods_supported": ["none"],
+    "end_session_endpoint": "https://miketranokta-test.apigee.net/okta-apigee/oauth2/v1/logout",
+    "request_parameter_supported": false
+}
+```
+
 - Deploy the new proxy to an environment
 
 ## Testing
