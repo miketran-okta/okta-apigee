@@ -1,6 +1,6 @@
 # okta-apigee
 
-This proxy project mints APIGEE opaque tokens which are mapped to Okta JWT tokens for authentication and authorizaton.  The project allows teams to leverage the benefits of Okta as an Identity Provider and yet continue to leverage APIGEE opaque tokens which may have already been issued in live production environments.  Thus this proxy provides a vehicle for teams to gracefully migrate OAuth clients over to Okta without requireing re-authenticaton, password resets or any other functions which could disrupte the user experience.
+This proxy project mints APIGEE opaque tokens which are mapped to Okta JWT tokens for authentication and authorizaton.  The project allows teams to leverage the benefits of Okta as an Identity Provider and yet continue to leverage APIGEE opaque tokens which may have already been issued in live production environments.  Thus this proxy provides a vehicle for teams to gracefully migrate OAuth clients over to Okta without requiring re-authenticaton, password resets or any other functions which could disrupte the user experience.
 
 ## Prerequisites
 
