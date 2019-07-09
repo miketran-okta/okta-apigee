@@ -12,12 +12,12 @@ This proxy project mints APIGEE opaque tokens which are mapped to Okta JWT token
 - Zip the apiproxy directory (i.e apiproxy.zip) and depoy the bundle as a new Proxy within the APIGEE administrator console
 - Update the **Assign Environment Variables** under Policies with the appropriate configuration values
 
-![1](https://github.com/miketran-okta/okta-apigee/blob/master/1.png "1")
+<img src="https://github.com/miketran-okta/okta-apigee/blob/master/1.png"/>
 
 - Update the *HTTP Target* of the *default* under **Target Endpoints** to reference the Okta tenet 
     - for example: *https://dev-989484.oktapreview.com*
 
-![1](https://github.com/miketran-okta/okta-apigee/blob/master/2.png "1")
+<img src="https://github.com/miketran-okta/okta-apigee/blob/master/2.png"/>
 
 - Under Policies -> **openid-configuration**, update the json object within the *payload* tag to reference the Apigee proxy URL 
     - for example: *https://miketranokta-test.apigee.net/okta-apigee*
@@ -50,7 +50,7 @@ This proxy project mints APIGEE opaque tokens which are mapped to Okta JWT token
 }
 ```
 
-![1](https://github.com/miketran-okta/okta-apigee/blob/master/3.png "1")
+<img src="https://github.com/miketran-okta/okta-apigee/blob/master/3.png"/>
 
 - Deploy the new proxy to an environment
 
@@ -60,7 +60,7 @@ This project can be tested with any OAuth client.  A good example would be the O
 
 ## Architecture Flow
 
-![Okta + Apigee](https://github.com/miketran-okta/okta-apigee/blob/master/Okta%2BApigee%20Sequence%20Diagram_v4.png "Okta + APIGEE")
+<img src="https://github.com/miketran-okta/okta-apigee/blob/master/Okta%2BApigee%20Sequence%20Diagram_v4.png"/>
 
 
 
