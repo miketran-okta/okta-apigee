@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<PopulateCache async="false" continueOnError="false" enabled="true" name="Populate-Cache-Set-Okta-Scopes">
+    <DisplayName>Populate Cache-Set Okta Scopes</DisplayName>
+    <FaultRules/>
+    <Properties/>
+    <CacheKey>
+        <Prefix>okta</Prefix>
+        <KeyFragment>scope</KeyFragment>
+        <KeyFragment ref="oauthv2authcode.GenerateAuthorizationCode.code"/>
+    </CacheKey>
+    <CacheResource>cache1</CacheResource>
+    <Scope>Application</Scope>
+    <ExpirySettings>
+        <TimeoutInSec>120</TimeoutInSec>
+    </ExpirySettings>
+    <Source>request.queryparam.scope</Source>
+</PopulateCache>

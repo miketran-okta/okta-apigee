@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<LookupCache async="false" continueOnError="false" enabled="true" name="LookupCache-Okta-Access-Token">
+    <DisplayName>LookupCache-Okta Access Token</DisplayName>
+    <FaultRules/>
+    <Properties/>
+    <CacheKey>
+        <Prefix>okta</Prefix>
+        <KeyFragment>access_token</KeyFragment>
+        <KeyFragment ref="apigee.access_token"/>
+    </CacheKey>
+    <CacheResource>cache1</CacheResource>
+    <Scope>Application</Scope>
+    <AssignTo>okta.access_token</AssignTo>
+</LookupCache>

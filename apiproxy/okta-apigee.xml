@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<APIProxy revision="2" name="okta-apigee">
+    <Basepaths>/okta-apigee</Basepaths>
+    <ConfigurationVersion majorVersion="4" minorVersion="0"/>
+    <CreatedAt>1561962084671</CreatedAt>
+    <CreatedBy>mike.tran@okta.com</CreatedBy>
+    <Description></Description>
+    <DisplayName>okta-apigee</DisplayName>
+    <LastModifiedAt>1562644789119</LastModifiedAt>
+    <LastModifiedBy>mike.tran@okta.com</LastModifiedBy>
+    <ManifestVersion>SHA-512:47175225c7801fae878688e8bf2c5c02d7a721da1f261d4948ac6ab6fa8240261395e09edf24b7f12c686623d1fbc9dd5347680c074f298ebd01f9c114b933f0</ManifestVersion>
+    <Policies>
+        <Policy>ApigeeAccessTokenResponse</Policy>
+        <Policy>Assign-Message-ApigeeCredentials</Policy>
+        <Policy>Assign-Message-Authorization-Header</Policy>
+        <Policy>Assign-Message-FP_Okta_ClientID</Policy>
+        <Policy>Assign-Message-Okta-Code</Policy>
+        <Policy>Assign-Message-QP_Okta_ClientID</Policy>
+        <Policy>Assign-Message-Set-APIGEE-Code</Policy>
+        <Policy>Basic-Authentication-Apigee</Policy>
+        <Policy>Decode-JWT-Okta-Access-Token</Policy>
+        <Policy>Extract-Variables-Access-Token</Policy>
+        <Policy>Extract-Variables-Apigee-Code</Policy>
+        <Policy>Extract-Variables-Nonce</Policy>
+        <Policy>Extract-Variables-Okta-OAuth-Tokens</Policy>
+        <Policy>Extract-Variables-Okta_RedirectURI</Policy>
+        <Policy>Extract-Variables-Okta_State</Policy>
+        <Policy>GenerateAccessToken</Policy>
+        <Policy>GenerateAuthorizationCode</Policy>
+        <Policy>JavaScript-Debug</Policy>
+        <Policy>JavaScript-Extract-Okta-Code</Policy>
+        <Policy>Lookup-Cache-Okta-Scope</Policy>
+        <Policy>Lookup-Cache-OktaCode</Policy>
+        <Policy>LookupCache-Okta-Access-Token</Policy>
+        <Policy>OAuth-v20-1</Policy>
+        <Policy>Populate-Cache-Okta-Access-Token</Policy>
+        <Policy>Populate-Cache-Okta-ID-Token</Policy>
+        <Policy>Populate-Cache-Okta-Refresh-Token</Policy>
+        <Policy>Populate-Cache-Set-Okta-Code</Policy>
+        <Policy>Populate-Cache-Set-Okta-Scopes</Policy>
+        <Policy>ValidationResponse</Policy>
+        <Policy>add-cors</Policy>
+        <Policy>openid-configuration</Policy>
+    </Policies>
+    <ProxyEndpoints>
+        <ProxyEndpoint>default</ProxyEndpoint>
+    </ProxyEndpoints>
+    <Resources>
+        <Resource>jsc://Extract_Okta_Code.js</Resource>
+        <Resource>jsc://Script-Debug.js</Resource>
+    </Resources>
+    <Spec></Spec>
+    <TargetServers/>
+    <TargetEndpoints>
+        <TargetEndpoint>default</TargetEndpoint>
+    </TargetEndpoints>
+</APIProxy>

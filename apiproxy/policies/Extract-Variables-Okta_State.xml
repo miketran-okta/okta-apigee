@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ExtractVariables async="false" continueOnError="false" enabled="true" name="Extract-Variables-Okta_State">
+    <Source clearPayload="false">request</Source>
+    <QueryParam name="state">
+        <Pattern ignoreCase="true">{state}</Pattern>
+    </QueryParam>
+    <VariablePrefix>okta</VariablePrefix>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+</ExtractVariables>

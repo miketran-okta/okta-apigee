@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<PopulateCache async="false" continueOnError="false" enabled="true" name="Populate-Cache-Okta-ID-Token">
+    <DisplayName>Populate Cache-Okta ID Token</DisplayName>
+    <Properties/>
+    <CacheKey>
+        <Prefix>okta</Prefix>
+        <KeyFragment>id_token</KeyFragment>
+        <KeyFragment ref="okta.id_token"/>
+    </CacheKey>
+    <CacheResource>cache1</CacheResource>
+    <Scope>Exclusive</Scope>
+    <ExpirySettings>
+        <TimeoutInSec>3600</TimeoutInSec>
+    </ExpirySettings>
+    <Source>okta.id_token</Source>
+</PopulateCache>

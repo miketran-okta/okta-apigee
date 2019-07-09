@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<LookupCache async="false" continueOnError="false" enabled="true" name="Lookup-Cache-Okta-Scope">
+    <DisplayName>Lookup Cache-Okta Scope</DisplayName>
+    <Properties/>
+    <CacheKey>
+        <Prefix>okta</Prefix>
+        <KeyFragment>scope</KeyFragment>
+        <KeyFragment ref="apigee.code"/>
+    </CacheKey>
+    <CacheResource>cache1</CacheResource>
+    <Scope>Exclusive</Scope>
+    <AssignTo>okta.scope</AssignTo>
+</LookupCache>

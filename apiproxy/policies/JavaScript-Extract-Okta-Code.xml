@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Javascript async="false" continueOnError="false" enabled="true" timeLimit="200" name="JavaScript-Extract-Okta-Code">
+    <DisplayName>JavaScript-Extract Okta Code</DisplayName>
+    <Properties/>
+    <ResourceURL>jsc://Extract_Okta_Code.js</ResourceURL>
+</Javascript>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ExtractVariables async="false" continueOnError="false" enabled="true" name="Extract-Variables-Nonce">
+    <Source clearPayload="false">request</Source>
+    <QueryParam name="nonce">
+        <Pattern ignoreCase="true">{nonce}</Pattern>
+    </QueryParam>
+    <VariablePrefix>okta</VariablePrefix>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+</ExtractVariables>

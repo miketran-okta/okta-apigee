@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ExtractVariables async="false" continueOnError="false" enabled="true" name="Extract-Variables-Access-Token">
+    <DisplayName>Extract Variables-Access Token</DisplayName>
+    <Source>request</Source>
+    <Header name="Authorization">
+        <Pattern ignoreCase="false">Bearer {access_token}</Pattern>
+    </Header>
+    <VariablePrefix>apigee</VariablePrefix>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+</ExtractVariables>

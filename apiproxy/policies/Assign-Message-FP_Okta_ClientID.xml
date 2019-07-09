@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="Assign-Message-FP_Okta_ClientID">
+    <DisplayName>Assign Message-FP_Okta_ClientID</DisplayName>
+    <Set>
+        <Headers/>
+        <FormParams>
+            <FormParam name="client_id">{okta_client_id}</FormParam>
+        </FormParams>
+        <!-- <Verb>GET</Verb> -->
+        <Path/>
+    </Set>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <AssignTo createNew="false" transport="http" type="request"/>
+</AssignMessage>

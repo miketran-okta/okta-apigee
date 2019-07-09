@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<LookupCache async="false" continueOnError="false" enabled="true" name="Lookup-Cache-OktaCode">
+    <DisplayName>Lookup Cache-OktaCode</DisplayName>
+    <Properties/>
+    <CacheKey>
+        <Prefix>okta</Prefix>
+        <KeyFragment>code</KeyFragment>
+        <KeyFragment ref="request.formparam.code"/>
+    </CacheKey>
+    <CacheResource>cache1</CacheResource>
+    <Scope>Exclusive</Scope>
+    <AssignTo>okta.code</AssignTo>
+</LookupCache>

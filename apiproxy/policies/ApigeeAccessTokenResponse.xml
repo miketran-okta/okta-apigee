@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="ApigeeAccessTokenResponse">
+    <DisplayName>Apigee Access Token Response</DisplayName>
+    <FaultRules/>
+    <Properties/>
+    <Set>
+        <Payload contentType="application/json" variablePrefix="%" variableSuffix="#">
+        {
+        "id_token":"%okta.id_token#",
+        "access_token":"%oauthv2accesstoken.GenerateAccessToken.access_token#",
+        "refresh_token":"%oauthv2accesstoken.GenerateAccessToken.refresh_token#",
+        "expires_in":"%oauthv2accesstoken.GenerateAccessToken.expires_in#",
+        "scope":"%okta.scope#"
+        }
+        </Payload>
+    </Set>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <AssignTo type="response" transport="http" createNew="true"/>
+</AssignMessage>

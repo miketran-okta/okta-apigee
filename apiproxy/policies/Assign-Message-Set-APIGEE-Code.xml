@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="Assign-Message-Set-APIGEE-Code">
+    <DisplayName>Assign Message-Set APIGEE Code</DisplayName>
+    <Properties/>
+    <Set>
+        <Headers>
+            <Header name="Location">{redirectURI}?code={oauthv2authcode.GenerateAuthorizationCode.code}&amp;state={okta.state}</Header>
+        </Headers>
+        <QueryParams/>
+        <FormParams/>
+        <!-- <Verb>GET</Verb> -->
+        <Path/>
+    </Set>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <AssignTo createNew="false" transport="http" type="request"/>
+</AssignMessage>

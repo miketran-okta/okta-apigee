@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProxyEndpoint name="default">
+    <Description/>
+    <FaultRules/>
+    <PreFlow name="PreFlow">
+        <Request/>
+        <Response/>
+    </PreFlow>
+    <PostFlow name="PostFlow">
+        <Request/>
+        <Response/>
+    </PostFlow>
+    <Flows>
+        <Flow name="Flow-openid-configuration">
+            <Description/>
+            <Request>
+                <Step>
+                    <Name>Assign-Message-ApigeeCredentials</Name>
+                </Step>
+                <Step>
+                    <Name>Assign-Message-QP_Okta_ClientID</Name>
+                </Step>
+            </Request>
+            <Response>
+                <Step>
+                    <Name>openid-configuration</Name>
+                </Step>
+            </Response>
+            <Condition>(proxy.pathsuffix MatchesPath "/.well-known/openid-configuration") and (request.verb = "GET")</Condition>
+        </Flow>
+        <Flow name="Flow-Authorize">
+            <Description/>
+            <Request>
+                <Step>
+                    <Name>Assign-Message-ApigeeCredentials</Name>
+                </Step>
+                <Step>
+                    <Name>GenerateAuthorizationCode</Name>
+                </Step>
+                <Step>
+                    <Name>Assign-Message-QP_Okta_ClientID</Name>
+                </Step>
+                <Step>
+                    <Name>Extract-Variables-Okta_State</Name>
+                </Step>
+                <Step>
+                    <Name>Extract-Variables-Nonce</Name>
+                </Step>
+            </Request>
+            <Response>
+                <Step>
+                    <Name>Extract-Variables-Okta_RedirectURI</Name>
+                </Step>
+                <Step>
+                    <Name>JavaScript-Extract-Okta-Code</Name>
+                </Step>
+                <Step>
+                    <Name>Populate-Cache-Set-Okta-Code</Name>
+                </Step>
+                <Step>
+                    <Name>Populate-Cache-Set-Okta-Scopes</Name>
+                </Step>
+                <Step>
+                    <Name>Assign-Message-Set-APIGEE-Code</Name>
+                </Step>
+            </Response>
+            <Condition>(proxy.pathsuffix MatchesPath "/oauth2/v1/authorize") and (request.verb = "GET")</Condition>
+        </Flow>
+        <Flow name="Flow-Token">
+            <Description/>
+            <Request>
+                <Step>
+                    <Name>Assign-Message-ApigeeCredentials</Name>
+                </Step>
+                <Step>
+                    <Name>Extract-Variables-Apigee-Code</Name>
+                </Step>
+                <!-- Step>
+                    <Name>GenerateAccessToken</Name>
+                </Step -->
+                <Step>
+                    <Name>Assign-Message-FP_Okta_ClientID</Name>
+                </Step>
+                <Step>
+                    <Name>Lookup-Cache-OktaCode</Name>
+                </Step>
+                <Step>
+                    <Name>Assign-Message-Okta-Code</Name>
+                </Step>
+            </Request>
+            <Response>
+                <Step>
+                    <Name>Extract-Variables-Okta-OAuth-Tokens</Name>
+                </Step>
+                <Step>
+                    <Name>Decode-JWT-Okta-Access-Token</Name>
+                </Step>
+                <Step>
+                    <Name>Basic-Authentication-Apigee</Name>
+                </Step>
+                <Step>
+                    <Name>GenerateAccessToken</Name>
+                </Step>
+                <Step>
+                    <Name>Populate-Cache-Okta-Access-Token</Name>
+                </Step>
+                <Step>
+                    <Name>Populate-Cache-Okta-ID-Token</Name>
+                </Step>
+                <Step>
+                    <Name>Populate-Cache-Okta-Refresh-Token</Name>
+                </Step>
+                <Step>
+                    <Name>Lookup-Cache-Okta-Scope</Name>
+                </Step>
+                <Step>
+                    <Name>ApigeeAccessTokenResponse</Name>
+                </Step>
+                <Step>
+                    <Name>JavaScript-Debug</Name>
+                </Step>
+            </Response>
+            <Condition>(proxy.pathsuffix MatchesPath "/oauth2/v1/token") and (request.verb = "POST")</Condition>
+        </Flow>
+        <Flow name="Flow-User Info">
+            <Description/>
+            <Request>
+                <Step>
+                    <Name>Extract-Variables-Access-Token</Name>
+                </Step>
+                <Step>
+                    <Name>LookupCache-Okta-Access-Token</Name>
+                </Step>
+                <Step>
+                    <Name>Assign-Message-Authorization-Header</Name>
+                </Step>
+            </Request>
+            <Response/>
+            <Condition>(proxy.pathsuffix MatchesPath "/oauth2/v1/userinfo") and (request.verb = "POST")</Condition>
+        </Flow>
+        <Flow name="Flow-Validate">
+            <Description/>
+            <Request>
+                <Step>
+                    <Name>OAuth-v20-1</Name>
+                </Step>
+            </Request>
+            <Response>
+                <Step>
+                    <Name>ValidationResponse</Name>
+                </Step>
+                <Step>
+                    <Name>add-cors</Name>
+                </Step>
+            </Response>
+            <Condition>(proxy.pathsuffix MatchesPath "/oauth2/v1/validate") and (request.verb = "GET")</Condition>
+        </Flow>
+    </Flows>
+    <HTTPProxyConnection>
+        <BasePath>/okta-apigee</BasePath>
+        <Properties/>
+        <VirtualHost>default</VirtualHost>
+        <VirtualHost>secure</VirtualHost>
+    </HTTPProxyConnection>
+    <RouteRule name="noroute">
+        <Condition>(proxy.pathsuffix MatchesPath "/oauth2/v1/validate") and (request.verb = "GET")</Condition>
+    </RouteRule>
+    <RouteRule name="default">
+        <TargetEndpoint>default</TargetEndpoint>
+    </RouteRule>
+</ProxyEndpoint>

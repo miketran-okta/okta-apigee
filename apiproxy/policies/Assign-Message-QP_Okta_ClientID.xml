@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="Assign-Message-QP_Okta_ClientID">
+    <DisplayName>Assign Message-QP_Okta_ClientID</DisplayName>
+    <Set>
+        <Headers/>
+        <QueryParams>
+            <QueryParam name="client_id">{okta_client_id}</QueryParam>
+        </QueryParams>
+        <FormParams/>
+        <!-- <Verb>GET</Verb> -->
+        <Path/>
+    </Set>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <AssignTo createNew="false" transport="http" type="request"/>
+</AssignMessage>

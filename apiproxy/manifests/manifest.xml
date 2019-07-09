@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Manifest name="manifest">
+    <Policies>
+        <VersionInfo resourceName="ApigeeAccessTokenResponse" version="SHA-512:ccc2506ec1c40a7210afa2fdf2d796d74fc770fb0c0c58f5c1a650181e8503b20ebf2487f32711ff2c81519705ecb4674844345d7b8acd13b213e60432ebab4b"/>
+        <VersionInfo resourceName="Assign-Message-ApigeeCredentials" version="SHA-512:bd4f67cfe3a40235164c871398c7225fea2df4061f8e8cff4908abd3afb4cdb00e228e75115de8ebe56aefdc2f6d897fc352849e968457a436a608644b283b80"/>
+        <VersionInfo resourceName="Assign-Message-Authorization-Header" version="SHA-512:c75cb1b4c6c8bc36e401d8542d7aa83cf4d3cfd5f69e0994d20170240e006daab4be99368a51e67d08e9d80169bbffa5b69134c42b6918166241a767c2a35b8e"/>
+        <VersionInfo resourceName="Assign-Message-FP_Okta_ClientID" version="SHA-512:c15c5b31cd48e175ea0496c7b20055263bc4c996bb067c362a586b586c1d53773259840806befae223c3e2637c8efcd2eb76432359f4921e94bb8822013fec2b"/>
+        <VersionInfo resourceName="Assign-Message-Okta-Code" version="SHA-512:4f565484b6fa0c71629c6600987c0705adba9aae1aac172400259cc10e4093e9c13276c1ee49c1d8b1565fcdfa5218ba9671f1f7aa9fe4ad37e71e59a7fdc63e"/>
+        <VersionInfo resourceName="Assign-Message-QP_Okta_ClientID" version="SHA-512:31d945d5b038cf5fbe6f9a840bde95b357c58b5c9fb7281911281a3065a0453d3aeb7a6da326ebcc6ee7e3c583e51ff75c00b18b79eb346e50bf1870abae5b9a"/>
+        <VersionInfo resourceName="Assign-Message-Set-APIGEE-Code" version="SHA-512:3582a79d79b817a6491db2a1a3894b8aa7ce516320731ec6bf52670ee66e67ffd38dc2b18c723ad0df9c687c425195f7455ea5c8ac9273a5da11b7d1d1079ad7"/>
+        <VersionInfo resourceName="Basic-Authentication-Apigee" version="SHA-512:b611a5f2a883f87a886a20a7d549953e20e1215196f1e5b0e3d58810b32ed4c0a62e90af0e86a67c14c02227eb433de4ce2ae22a77ddfad647b163c9765c68b0"/>
+        <VersionInfo resourceName="Decode-JWT-Okta-Access-Token" version="SHA-512:b40f95454ebf160a57edb5e7906fc8cf5e29fa0754dac4abb450405bc98b7318fac0d4f6aa933325342c7026e401ed8a82f103eb0cfaac71a5f7d9194988c2ce"/>
+        <VersionInfo resourceName="Extract-Variables-Access-Token" version="SHA-512:16bd8eb0f06ea70c375cd7c8dc34d4675f71bd3fec3df3ec612eefdac7af09eac67bba1df02e14be36633731a6270870c5ff7b22a24dae0bfcd310ffdf139946"/>
+        <VersionInfo resourceName="Extract-Variables-Apigee-Code" version="SHA-512:10df28e42a5d4906dfe4322676f0850e1fe0c545a1bc967463cb8f6c7841fe2b08ea5fb3e6866913145d773d9627315aa5f86b5743c3834685cbcd573ac3892f"/>
+        <VersionInfo resourceName="Extract-Variables-Nonce" version="SHA-512:9a9e4507dbdaf524656529cb5b6dc15066ae59ce1cd96c57d6602a66abc939debf3a7deaffba49c72ec7b645151a256abebf0ee8d4602dfe85aa704a43358c40"/>
+        <VersionInfo resourceName="Extract-Variables-Okta-OAuth-Tokens" version="SHA-512:dbc5a3af758f3c8299cb6a0d5f3eca1f6cee5c33a55755ead637fa0a650e5257afa6e75bcc097f446933e17864f928ac06dfe56c168190e471956a9f9a34ea8b"/>
+        <VersionInfo resourceName="Extract-Variables-Okta_RedirectURI" version="SHA-512:d9cdc9ced235d6faf96935324969aff91ca21df0b8cc5428ab555b59f73d25136ed8748838f83938ea17194f8930a1f23ee4753c28c8225b20a6be7b62ce9af1"/>
+        <VersionInfo resourceName="Extract-Variables-Okta_State" version="SHA-512:8316c2b32fd8b6f84d834025bf545ab54a9f6e4f6b25c3c9ba294b322d1b66d453426143599e91e20570128d0eb80bd17f64f2dd0f2675a525ce054fe83f4816"/>
+        <VersionInfo resourceName="GenerateAccessToken" version="SHA-512:3defe7bec500ce48456a87ac0bb51b3c46a74fc0181c3bf579561736cd027be7951bd21efe040e37fb9d974fa56da1ca7ad6cb1343c53b4591ca6287ca03f77d"/>
+        <VersionInfo resourceName="GenerateAuthorizationCode" version="SHA-512:272b9baf147012e71f6b5a933c0e6f907078dfc005f91024351899f103df062c48cf21214edc206e2155e32fefa4dcae21d74968c1399f21ce1262f9dd0eba62"/>
+        <VersionInfo resourceName="JavaScript-Debug" version="SHA-512:6b534000963bbff18ca6d844c43b87e81a2922e99de414e3e5d7ddab41705b9b48e8f5309b6a2833abb565965a2afe1b1dadb80b82bb3c96772bd8ea05bc2775"/>
+        <VersionInfo resourceName="JavaScript-Extract-Okta-Code" version="SHA-512:a694cd621b58567a135dacdb07fe477628892565a3d1191f2ddc35448ea1d52f57cdfe77828d1cab34d7857099e35d035b06f3054be4fe303a7aa107d15afd37"/>
+        <VersionInfo resourceName="Lookup-Cache-Okta-Scope" version="SHA-512:8a0b0eb583d5c3330c5f67206734da7ed162484e085b3fe2adf78e9d24e2f7b21e2c7aaf414b88229190307775b81ddcb6ac199d241d47a2f4007c14524fc6d1"/>
+        <VersionInfo resourceName="Lookup-Cache-OktaCode" version="SHA-512:50321b2e386f2b9719310e559adc5d4f22adbf7823cb07601d422993e8f9708432ef963543afa50b4a18a31793088fd4430c52e120b020a27af5e7f7b6884926"/>
+        <VersionInfo resourceName="LookupCache-Okta-Access-Token" version="SHA-512:ea80bd6d97787a73bd135df1211cc2aa1523a6cf6c7da187b3342cb1c215a0f9a90ea762383e17316a77f552691982fe3f257a16a9c08ef5437e3c2c9edeb77c"/>
+        <VersionInfo resourceName="OAuth-v20-1" version="SHA-512:d2a0076878ded1a5d4cd47f57f0b89e679c42d35a840889a1d17aca38f4c4c044707913ad14e9e81dd8c14870dae62d9d149079239f931a32ad10a75d090b64b"/>
+        <VersionInfo resourceName="Populate-Cache-Okta-Access-Token" version="SHA-512:eef8f66edddb1a223bc7a2b5bb9ec17d32751baebb155441596cfafcf4ec5e74257fc2d0a2ccab7437a20b3922e163e1d6fc7a49aebfc8ad7e451d2945a68e15"/>
+        <VersionInfo resourceName="Populate-Cache-Okta-ID-Token" version="SHA-512:04ff396792ba33fb662d3e81856dd96ddbd6957bf8a24d715066aeb5aa287d768f31190ee3aa679db40a0543bad5516a6a327af851e122c53ff8c9fefecb5ee7"/>
+        <VersionInfo resourceName="Populate-Cache-Okta-Refresh-Token" version="SHA-512:f4e72dcc8eab5f69eb65bd77e101945e920f432e6a103dd5e7fc43aefed067abba3fd2b32a029a67ce084c20f6b9b5c0f5893ccd25a65df671898c544811cef1"/>
+        <VersionInfo resourceName="Populate-Cache-Set-Okta-Code" version="SHA-512:062f5199e7ff0ec2d31c1b93292f7b8ed325cd36751f0b551b9d565258920896b08c5054fc61fa81b5f73f283b427c885cbb555da8b7bd615ae07cccb16c20ce"/>
+        <VersionInfo resourceName="Populate-Cache-Set-Okta-Scopes" version="SHA-512:a8e754a3268532375606ba174e715571c1151222b4ec2b60f71dce30570cd51c420865840876391c1ced08547d30f9b05365ffe23f6fb185f8ae511af5ae28ab"/>
+        <VersionInfo resourceName="ValidationResponse" version="SHA-512:1dc911959a39208840b159dd07947dd02bebd84e07228ae00a097ef1ce8c492c7fe108733d35fd3b50cc2ca132123d776c9a486f5b3a7a0b5eb29d6d57b7f297"/>
+        <VersionInfo resourceName="add-cors" version="SHA-512:08cc2ef69b08ee73467f7be74960047faa490fcc61ebba744cc1436358ed8068b052ee8c6e101ad00a5d54633c92d8195f7ed624372a59614265f0e515a1b5a1"/>
+        <VersionInfo resourceName="openid-configuration" version="SHA-512:17890aae18b5f218e2b392c748e439a4953c475e4aa9bec2418f166393c09ffee3de4f8c63afeaea6307a195714ca4df516c67ce189270fb555c64153c6fc512"/>
+    </Policies>
+    <ProxyEndpoints>
+        <VersionInfo resourceName="default" version="SHA-512:8643d2924e496b0860b9796490f42c9e38f54b3ef722c17b10f18c686038a05079d978b4defbdf39b215a23b000aee3e3e42a8e1f47884f95db93f1e2b2cf54d"/>
+    </ProxyEndpoints>
+    <Resources>
+        <VersionInfo resourceName="jsc://Extract_Okta_Code.js" version="SHA-512:3963977024f4ec5027d599e4b55f8b38d6067ae87a1583373c543274da3f432357a010b578caceea2705147ee7ce5916f20f1091f99760207c51f0f72d8125b8"/>
+        <VersionInfo resourceName="jsc://Script-Debug.js" version="SHA-512:3feda340dde9a5d2d79041631209aa9519ed38f5cb0c81a602d79a218998ec283ae5313722cd669247923fe7cb7a7a52e22ff1f18eac745dd4ed2db13c8454b0"/>
+    </Resources>
+    <SharedFlows/>
+    <TargetEndpoints>
+        <VersionInfo resourceName="default" version="SHA-512:b3e1fd085c9d090bfe2e4eb562c76a886c5419f7b6bd9f0506741c59af2da838757cafaedc411e50410e0e6484894ef0334bca3bff582c101e6847a3489ca2a0"/>
+    </TargetEndpoints>
+</Manifest>

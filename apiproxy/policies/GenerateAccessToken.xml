@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<OAuthV2 name="GenerateAccessToken">
+    <Operation>GenerateAccessToken</Operation>
+    <ExpiresIn>1800000</ExpiresIn>
+    <RefreshTokenExpiresIn>86400000</RefreshTokenExpiresIn>
+    <SupportedGrantTypes>
+        <GrantType>authorization_code</GrantType>
+    </SupportedGrantTypes>
+    <GenerateResponse enabled="false"/>
+    <ClientId>apigee.client_id</ClientId>
+    <Code>apigee.code</Code>
+    <Attributes>
+        <Attribute display="true" name="context_json" ref="jwt.Decode-JWT-Okta-Access-Token.payload-json">NA</Attribute>
+    </Attributes>
+</OAuthV2>
