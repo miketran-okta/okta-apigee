@@ -15,13 +15,13 @@ This proxy project mints APIGEE opaque tokens which are mapped to Okta JWT token
 ![1](https://github.com/miketran-okta/okta-apigee/blob/master/1.png "1")
 
 - Update the *HTTP Target* of the *default* under **Target Endpoints** to reference the Okta tenet 
-    - *i.e https://dev-989484.oktapreview.com* 
+    - for example: *https://dev-989484.oktapreview.com*
 
 ![1](https://github.com/miketran-okta/okta-apigee/blob/master/2.png "1")
 
-- Under Policies -> **openid-configuration**, update the json object within the *payload* tag to reference the correct Apigee endpoints 
-    - *i.e https://miketranokta-test.apigee.net/okta-apigee/*
-    - also ensure the **issuer** is set to the URL of the okta tenet
+- Under Policies -> **openid-configuration**, update the json object within the *payload* tag to reference the Apigee proxy URL 
+    - for example: *https://miketranokta-test.apigee.net/okta-apigee*
+    - ensure the **issuer** is set to the URL of the okta tenet
 
 ```json
 
